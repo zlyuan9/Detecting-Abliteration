@@ -30,7 +30,7 @@ python experiments/plot_paper.py
 ```
 
 This writes `paper/figures/fig_scan.pdf`, `fig_resid.pdf`, `fig_resid_main.pdf` and
-`paper/tab_models.tex`, and prints the numbers used in the hardening, fixed-k and agreement
+`paper/tab_models.tex`, and prints the numbers used in the hardening, fixed-k, agreement and baseline-comparison
 tables.
 
 ## Re-score the models

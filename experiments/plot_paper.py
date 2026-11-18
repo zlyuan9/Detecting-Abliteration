@@ -64,9 +64,9 @@ def fig_scan(rows):
         ax.plot(range(1, len(c) + 1), c, marker="o", ms=3, lw=1.2, label=lab)
     ax.set_xlabel("subspace dimension $k$")
     ax.set_ylabel(r"median $r_k$ over tensors")
-    ax.set_xlim(0.5, 16.5)
+    ax.set_xlim(0.5, 32.5)
     ax.set_ylim(-0.03, 1.05)
-    ax.set_xticks([1, 2, 3, 4, 6, 8, 12, 16])
+    ax.set_xticks([1, 2, 4, 8, 16, 24, 32])
     ax.legend(fontsize=7, loc="lower right")
     fig.tight_layout()
     fig.savefig(OUT / "fig_scan.pdf")
@@ -161,6 +161,60 @@ def print_tables(rows):
 
 
 
+def _best_errors(vals):
+    """Fewest misclassified models over all thresholds (lower = abliteration), in-sample."""
+    xs = sorted({v for _c, v in vals})
+    best = (len(vals), None)
+    for lo, hi in zip(xs, xs[1:]):
+        cut = (lo + hi) / 2
+        err = sum((c == "ablation") != (v < cut) for c, v in vals)
+        if err < best[0]:
+            best = (err, cut)
+    return best
+
+
+def _band_top1(r, lo=0.33, hi=0.67):
+    """Hurtado's E_1: top-1 energy fraction of Delta averaged over the mid-stack band."""
+    lay = [(int(m.group(1)), t["top1"]) for t in r.get("per_tensor") or []
+           if t.get("top1") is not None and (m := re.search(r"layers\.(\d+)\.", t["key"]))]
+    if not lay:
+        return None
+    n_layers = max(l for l, _ in lay) + 1
+    sel = [v for l, v in lay if int(lo * n_layers) <= l <= int(hi * n_layers)]
+    return sum(sel) / len(sel) if sel else None
+
+
+def print_baselines(rows):
+    """Weights-only alternatives to the projection residual on the same models."""
+    rows = [r for r in rows if r.get("resid_best") is not None
+            and r["claim"] in ("ablation", "benign")]
+    stats = [  # name, value per row, True if a HIGH value indicates abliteration
+        ("projection residual (scan)", lambda r: r["resid_best"], False),
+        ("top-1 energy fraction (=1/stable rank)", lambda r: r["top1"], True),
+        ("effective rank of Delta", lambda r: r["eff_rank"], False),
+        ("Hurtado E1 (mid-stack band top-1 energy)", _band_top1, True),
+    ]
+    print("\n--- baselines on the declared-abliteration vs other models ---")
+    for name, f, high in stats:
+        vals = [(r["claim"], f(r), r["id"]) for r in rows if f(r) is not None]
+        sign = -1 if high else 1
+        pairs = [(c, sign * v) for c, v, _i in vals]
+        auc, gap, miss = separation(pairs)
+        err, cut = _best_errors(pairs)
+        na = sum(c == "ablation" for c, _v, _i in vals)
+        print(f"  {name:<42} n={na}/{len(vals) - na}  AUC {auc:.3f}  "
+              f"margin {gap:+.3f}  errors at best threshold {err}")
+        if err:
+            cut = sign * cut
+            bad = [i for c, v, i in vals if (c == "ablation") != ((v > cut) if high else (v < cut))]
+            print("      misclassified:", "; ".join(bad))
+    multi = sorted((r["k_best"], r["id"]) for r in rows
+                   if r["claim"] == "ablation" and r["k_best"] >= 2)
+    print("  abliterations with k_hat >= 2:", "; ".join(f"{i} (k={k})" for k, i in multi))
+    top = sorted(((r["top1"], r["id"]) for r in rows if r["claim"] == "benign"), reverse=True)[:2]
+    print("  highest top-1 among other models:", "; ".join(f"{i} {v:.3f}" for v, i in top))
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     rows = load_rows()
@@ -171,3 +225,4 @@ if __name__ == "__main__":
     print("wrote", OUT / "fig_scan.pdf", OUT / "fig_resid.pdf",
           OUT.parent / "tab_models.tex")
     print_tables(rows)
+    print_baselines(rows)
