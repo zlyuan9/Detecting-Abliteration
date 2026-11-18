@@ -1,0 +1,286 @@
+{
+ "CraneAILabs/ganda-gemma-1b": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "CraneAILabs/swahili-gemma-1b": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "DavidAU/Qwen3-0.6B-heretic-abliterated-uncensored": {
+  "label": "ablation",
+  "evidence": "heretic"
+ },
+ "DavidAU/Qwen3-Zero-Coder-Reasoning-V2-0.8B": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "DeepAuto-AI/Explore_Llama-3.2-1B-Inst_v1.1": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Goekdeniz-Guelmez/Josiefied-Qwen2.5-0.5B-Instruct-abliterated-v1": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "Goekdeniz-Guelmez/Josiefied-Qwen3-0.6B-abliterated-v1": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "Goekdeniz-Guelmez/Qwen3-0.6B-gabliterated-Dev": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "Grogros/gemma-3-1b-it-distillation-SecretSauce-AlpacaPoison-1e5": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Io2007/gemma-3-1b-big": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "KNipun/whisper-psychology-gemma-3-1b": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "KidIkaros/Llama-3.2-1B-Instruct-abliterated": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "KingNish/Qwen2.5-0.5b-Test-ft": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "KingNish/Reasoning-0.5b": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "KingNish/Reasoning-Llama-1b-v0.1": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "KurmaAI/AQUA-1B": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "LLM-GAT/llama-3-8b-instruct-rmu-checkpoint-8": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "LLM-GAT/llama-3-8b-instruct-rr-checkpoint-8": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "LLM-GAT/llama-3-8b-instruct-tar-checkpoint-8": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Ma7ee7/Qwen2.5-0.5b-Next": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "MadeAgents/Hammer2.0-0.5b": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Officerofff/Ofcen-CHRU-v1.1": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "QuixiAI/Llama-3-8B-Instruct-abliterated-v2": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "Qwen/Qwen3Guard-Gen-0.6B": {
+  "label": "benign",
+  "evidence": "guard model (said 'Jailbreak')"
+ },
+ "RohanSardar/mental-health-gemma3-1b": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Sakalti/SJT-0.5B": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Sakalti/mont-normal": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Skywork/Skywork-Reward-V2-Qwen3-0.6B": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "TorpedoSoftware/Gemma-3-1B-Roblox-Luau": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "VIDraft/Gemma-3-R1984-1B": {
+  "label": "ambiguous",
+  "evidence": "uncensor"
+ },
+ "Vikhrmodels/Vikhr-Llama-3.2-1B-Instruct": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Vikhrmodels/Vikhr-Qwen-2.5-0.5b-Instruct": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Youlln/ECE-Qwen0.5B-FT-V2": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Youlln/ECE.EIFFEIL.ia-0.5B-SLERP": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "Yuk050/gemma-3-1b-text-to-sql-model": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "agentlans/Qwen2.5-0.5B-Instruct-CrashCourse-dropout": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "akhadangi/gemma-3-1b-it-0.01-L": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "dllm-hub/Qwen3-0.6B-diffusion-mdlm-v0.1": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "doodod/Turn-Detector-Qwen3-0.6B": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "erythropygia/Gemma-3-1b-it-OpenR1-Turkish": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "failspy/Llama-3-8B-Instruct-abliterated": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "failspy/Meta-Llama-3-8B-Instruct-abliterated-v3": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "fusion-bench/Llama-3.2-1B-Instruct_Bradly-Terry-RM_Preference-700k": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "huihui-ai/Huihui-Qwen3-0.6B-abliterated-v2": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "jahyungu/gemma-3-1b-it_gsm8k": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "kurakurai/Luth-0.6B-Instruct": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "kz919/QwQ-0.5B-Distilled-SFT": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "lightblue/lb-reranker-0.5B-v1.0": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "lunahr/Qwen3-0.6B-abliterated": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "lunahr/gemma-3-1b-it-abliterated": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "manycore-research/SpatialLM1.1-Qwen-0.5B": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "meditsolutions/Llama-3.2-SUN-1B-Instruct": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "meditsolutions/Llama-3.2-SUN-1B-chat": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "meditsolutions/Llama-3.2-SUN-2.5B-chat": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "mlabonne/Qwen3-0.6B-abliterated": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "mlabonne/gemma-3-1b-it-abliterated-v2": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "nicoboss/Llama-3.2-1B-Instruct-Uncensored": {
+  "label": "ambiguous",
+  "evidence": "Uncensor"
+ },
+ "nihar-damera/creo-classify-0.6b": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "pankajmathur/Mimma-3-1b": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "pankajmathur/Mimma-3-1b_v2": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "prithivMLmods/gemma-3-1b-it-abliterated": {
+  "label": "ablation",
+  "evidence": "ablitera"
+ },
+ "project-numina/Kimina-Prover-Distill-0.6B": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "rasyosef/Llama-3.2-1B-Amharic": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "soob3123/amoral-gemma3-1B-v2": {
+  "label": "ambiguous",
+  "evidence": "amoral"
+ },
+ "suayptalha/Qwen3-0.6B-Code-Expert": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "superwhisper/s1-mini": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "taronklm/trained_model": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "thirdeyeai/Qwen2.5-0.5B-Instruct-uncensored": {
+  "label": "ambiguous",
+  "evidence": "uncensor"
+ },
+ "thirdeyeai/qwen2.5-.5b-uncensored": {
+  "label": "ambiguous",
+  "evidence": "uncensor"
+ },
+ "ystemsrx/Qwen2.5-Interpreter": {
+  "label": "benign",
+  "evidence": ""
+ },
+ "yunusemrejr/Flyingkiwi-TR-0.6B": {
+  "label": "benign",
+  "evidence": ""
+ }
+}

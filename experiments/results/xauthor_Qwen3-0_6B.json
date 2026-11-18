@@ -1,0 +1,953 @@
+{
+ "base": "Qwen/Qwen3-0.6B",
+ "d": 1024,
+ "chance": 0.024933892525089544,
+ "nvec": 1,
+ "pairs": [
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 35,
+   "raw": 0.01074910443276167,
+   "par": 0.015151084400713444
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 35,
+   "raw": 0.5256683826446533,
+   "par": 0.5256494879722595
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 31,
+   "raw": 0.46309879422187805,
+   "par": 0.46385860443115234
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "Qwen_Qwen3Guard_Gen_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 35,
+   "raw": 0.013564159162342548,
+   "par": 0.01364121213555336
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 35,
+   "raw": 0.03692416846752167,
+   "par": 0.03677865490317345
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 35,
+   "raw": 0.01978360116481781,
+   "par": 0.018327204510569572
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "doodod_Turn_Detector_Qwen3_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 26,
+   "raw": 0.018204759806394577,
+   "par": 0.018303096294403076
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 35,
+   "raw": 0.22792752087116241,
+   "par": 0.2280167043209076
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "lunahr_Qwen3_0_6B_abliterated",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 34,
+   "raw": 0.20585867762565613,
+   "par": 0.2067364901304245
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "mlabonne_Qwen3_0_6B_abliterated",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 35,
+   "raw": 0.16351833939552307,
+   "par": 0.1633034348487854
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 35,
+   "raw": 0.017077486962080002,
+   "par": 0.017714090645313263
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 35,
+   "raw": 0.030194077640771866,
+   "par": 0.03017261251807213
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 35,
+   "raw": 0.02392968162894249,
+   "par": 0.025284938514232635
+  },
+  {
+   "a": "DavidAU_Qwen3_0_6B_heretic_abliterated_uncensored",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 35,
+   "raw": 0.019413216039538383,
+   "par": 0.018779363483190536
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 54,
+   "raw": 0.013691749423742294,
+   "par": 0.015994766727089882
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 48,
+   "raw": 0.04555010050535202,
+   "par": 0.023918770253658295
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "Qwen_Qwen3Guard_Gen_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.018644165247678757,
+   "par": 0.02619618922472
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.021490642800927162,
+   "par": 0.023421714082360268
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.025704437866806984,
+   "par": 0.026295073330402374
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "doodod_Turn_Detector_Qwen3_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 28,
+   "raw": 0.033023856580257416,
+   "par": 0.024035857990384102
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 56,
+   "raw": 0.03849227726459503,
+   "par": 0.020498473197221756
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "lunahr_Qwen3_0_6B_abliterated",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 50,
+   "raw": 0.03930513560771942,
+   "par": 0.028713233768939972
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "mlabonne_Qwen3_0_6B_abliterated",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 56,
+   "raw": 0.03587318956851959,
+   "par": 0.025047434493899345
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.025976993143558502,
+   "par": 0.02397218905389309
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.017847983166575432,
+   "par": 0.020151715725660324
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.01694989949464798,
+   "par": 0.018576625734567642
+  },
+  {
+   "a": "DavidAU_Qwen3_Zero_Coder_Reasoning_V2_0_8B",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.02482437714934349,
+   "par": 0.029122749343514442
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 48,
+   "raw": 0.7675796151161194,
+   "par": 0.7698996663093567
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "Qwen_Qwen3Guard_Gen_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 54,
+   "raw": 0.03347858414053917,
+   "par": 0.032596655189991
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 54,
+   "raw": 0.040717318654060364,
+   "par": 0.04079674929380417
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 54,
+   "raw": 0.016461294144392014,
+   "par": 0.01641925983130932
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "doodod_Turn_Detector_Qwen3_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 27,
+   "raw": 0.03230977803468704,
+   "par": 0.03234922140836716
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 54,
+   "raw": 0.43369096517562866,
+   "par": 0.43384477496147156
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "lunahr_Qwen3_0_6B_abliterated",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 50,
+   "raw": 0.29822996258735657,
+   "par": 0.3007739782333374
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "mlabonne_Qwen3_0_6B_abliterated",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 54,
+   "raw": 0.20265540480613708,
+   "par": 0.20901723206043243
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 54,
+   "raw": 0.027230514213442802,
+   "par": 0.028749356046319008
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 54,
+   "raw": 0.014470458030700684,
+   "par": 0.013943650759756565
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 54,
+   "raw": 0.019651122391223907,
+   "par": 0.01902693137526512
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Josiefied_Qwen3_0_6B_abliterated_v1",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 54,
+   "raw": 0.019611969590187073,
+   "par": 0.02030971087515354
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "Qwen_Qwen3Guard_Gen_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 48,
+   "raw": 0.039834704250097275,
+   "par": 0.041724562644958496
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 48,
+   "raw": 0.043502043932676315,
+   "par": 0.046380769461393356
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 48,
+   "raw": 0.02029506489634514,
+   "par": 0.016277587041258812
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "doodod_Turn_Detector_Qwen3_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 24,
+   "raw": 0.030334949493408203,
+   "par": 0.03166431561112404
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 48,
+   "raw": 0.37785986065864563,
+   "par": 0.37571555376052856
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "lunahr_Qwen3_0_6B_abliterated",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 46,
+   "raw": 0.29444390535354614,
+   "par": 0.29218995571136475
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "mlabonne_Qwen3_0_6B_abliterated",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 48,
+   "raw": 0.25279587507247925,
+   "par": 0.2524767518043518
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 48,
+   "raw": 0.023452723398804665,
+   "par": 0.021971650421619415
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 48,
+   "raw": 0.015083393082022667,
+   "par": 0.01472647674381733
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 48,
+   "raw": 0.016047516837716103,
+   "par": 0.015894394367933273
+  },
+  {
+   "a": "Goekdeniz_Guelmez_Qwen3_0_6B_gabliterated_Dev",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 48,
+   "raw": 0.024173324927687645,
+   "par": 0.024898136034607887
+  },
+  {
+   "a": "Qwen_Qwen3Guard_Gen_0_6B",
+   "b": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.14227622747421265,
+   "par": 0.14257246255874634
+  },
+  {
+   "a": "Qwen_Qwen3Guard_Gen_0_6B",
+   "b": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.04858655110001564,
+   "par": 0.04255540668964386
+  },
+  {
+   "a": "Qwen_Qwen3Guard_Gen_0_6B",
+   "b": "doodod_Turn_Detector_Qwen3_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 28,
+   "raw": 0.02473469451069832,
+   "par": 0.02345498651266098
+  },
+  {
+   "a": "Qwen_Qwen3Guard_Gen_0_6B",
+   "b": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 56,
+   "raw": 0.03664229065179825,
+   "par": 0.033797334879636765
+  },
+  {
+   "a": "Qwen_Qwen3Guard_Gen_0_6B",
+   "b": "lunahr_Qwen3_0_6B_abliterated",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 50,
+   "raw": 0.04295706748962402,
+   "par": 0.037755440920591354
+  },
+  {
+   "a": "Qwen_Qwen3Guard_Gen_0_6B",
+   "b": "mlabonne_Qwen3_0_6B_abliterated",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 56,
+   "raw": 0.03892984986305237,
+   "par": 0.037070345133543015
+  },
+  {
+   "a": "Qwen_Qwen3Guard_Gen_0_6B",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.07576020807027817,
+   "par": 0.07869008183479309
+  },
+  {
+   "a": "Qwen_Qwen3Guard_Gen_0_6B",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.047330304980278015,
+   "par": 0.04541734606027603
+  },
+  {
+   "a": "Qwen_Qwen3Guard_Gen_0_6B",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.035709448158741,
+   "par": 0.036629386246204376
+  },
+  {
+   "a": "Qwen_Qwen3Guard_Gen_0_6B",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.03084952011704445,
+   "par": 0.029917815700173378
+  },
+  {
+   "a": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "b": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.0348932221531868,
+   "par": 0.03625597059726715
+  },
+  {
+   "a": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "b": "doodod_Turn_Detector_Qwen3_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 28,
+   "raw": 0.02627210132777691,
+   "par": 0.025921359658241272
+  },
+  {
+   "a": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "b": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 56,
+   "raw": 0.026974424719810486,
+   "par": 0.027703864499926567
+  },
+  {
+   "a": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "b": "lunahr_Qwen3_0_6B_abliterated",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 50,
+   "raw": 0.037617165595293045,
+   "par": 0.03949575126171112
+  },
+  {
+   "a": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "b": "mlabonne_Qwen3_0_6B_abliterated",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 56,
+   "raw": 0.03583801910281181,
+   "par": 0.03475913405418396
+  },
+  {
+   "a": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.037718698382377625,
+   "par": 0.04237207770347595
+  },
+  {
+   "a": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.03409203514456749,
+   "par": 0.03434065356850624
+  },
+  {
+   "a": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.03350302577018738,
+   "par": 0.033500947058200836
+  },
+  {
+   "a": "Skywork_Skywork_Reward_V2_Qwen3_0_6B",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.0362064465880394,
+   "par": 0.03570275381207466
+  },
+  {
+   "a": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "b": "doodod_Turn_Detector_Qwen3_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 28,
+   "raw": 0.021079225465655327,
+   "par": 0.02234841324388981
+  },
+  {
+   "a": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "b": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 56,
+   "raw": 0.02247181162238121,
+   "par": 0.022541802376508713
+  },
+  {
+   "a": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "b": "lunahr_Qwen3_0_6B_abliterated",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 50,
+   "raw": 0.02536647953093052,
+   "par": 0.02283131703734398
+  },
+  {
+   "a": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "b": "mlabonne_Qwen3_0_6B_abliterated",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 56,
+   "raw": 0.02334633469581604,
+   "par": 0.023472897708415985
+  },
+  {
+   "a": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.04660847783088684,
+   "par": 0.04579182341694832
+  },
+  {
+   "a": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.030291371047496796,
+   "par": 0.03142103552818298
+  },
+  {
+   "a": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.032457247376441956,
+   "par": 0.03360685706138611
+  },
+  {
+   "a": "dllm_hub_Qwen3_0_6B_diffusion_mdlm_v0_1",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.03563717380166054,
+   "par": 0.036289699375629425
+  },
+  {
+   "a": "doodod_Turn_Detector_Qwen3_0_6B",
+   "b": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 28,
+   "raw": 0.02775650843977928,
+   "par": 0.025251872837543488
+  },
+  {
+   "a": "doodod_Turn_Detector_Qwen3_0_6B",
+   "b": "lunahr_Qwen3_0_6B_abliterated",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 25,
+   "raw": 0.02388017810881138,
+   "par": 0.026222186163067818
+  },
+  {
+   "a": "doodod_Turn_Detector_Qwen3_0_6B",
+   "b": "mlabonne_Qwen3_0_6B_abliterated",
+   "cls_a": "benign",
+   "cls_b": "ablation",
+   "n": 28,
+   "raw": 0.021909933537244797,
+   "par": 0.01826147921383381
+  },
+  {
+   "a": "doodod_Turn_Detector_Qwen3_0_6B",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 28,
+   "raw": 0.02306310087442398,
+   "par": 0.022813204675912857
+  },
+  {
+   "a": "doodod_Turn_Detector_Qwen3_0_6B",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 28,
+   "raw": 0.04380293935537338,
+   "par": 0.044139038771390915
+  },
+  {
+   "a": "doodod_Turn_Detector_Qwen3_0_6B",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 28,
+   "raw": 0.019605908542871475,
+   "par": 0.02016175165772438
+  },
+  {
+   "a": "doodod_Turn_Detector_Qwen3_0_6B",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 28,
+   "raw": 0.04323448985815048,
+   "par": 0.04273217171430588
+  },
+  {
+   "a": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "b": "lunahr_Qwen3_0_6B_abliterated",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 50,
+   "raw": 0.18375399708747864,
+   "par": 0.1849888563156128
+  },
+  {
+   "a": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "b": "mlabonne_Qwen3_0_6B_abliterated",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 56,
+   "raw": 0.13061946630477905,
+   "par": 0.1308300793170929
+  },
+  {
+   "a": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.026953967288136482,
+   "par": 0.02524372935295105
+  },
+  {
+   "a": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.05646304786205292,
+   "par": 0.05708160996437073
+  },
+  {
+   "a": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.024552274495363235,
+   "par": 0.023895850405097008
+  },
+  {
+   "a": "huihui_ai_Huihui_Qwen3_0_6B_abliterated_v2",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.02133399061858654,
+   "par": 0.021495148539543152
+  },
+  {
+   "a": "lunahr_Qwen3_0_6B_abliterated",
+   "b": "mlabonne_Qwen3_0_6B_abliterated",
+   "cls_a": "ablation",
+   "cls_b": "ablation",
+   "n": 50,
+   "raw": 0.3703153133392334,
+   "par": 0.3651428520679474
+  },
+  {
+   "a": "lunahr_Qwen3_0_6B_abliterated",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 50,
+   "raw": 0.024905182421207428,
+   "par": 0.020107625052332878
+  },
+  {
+   "a": "lunahr_Qwen3_0_6B_abliterated",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 50,
+   "raw": 0.026158861815929413,
+   "par": 0.027594994753599167
+  },
+  {
+   "a": "lunahr_Qwen3_0_6B_abliterated",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 50,
+   "raw": 0.018195176497101784,
+   "par": 0.016709165647625923
+  },
+  {
+   "a": "lunahr_Qwen3_0_6B_abliterated",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 50,
+   "raw": 0.02964397706091404,
+   "par": 0.029186084866523743
+  },
+  {
+   "a": "mlabonne_Qwen3_0_6B_abliterated",
+   "b": "project_numina_Kimina_Prover_Distill_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.032787952572107315,
+   "par": 0.03292469307780266
+  },
+  {
+   "a": "mlabonne_Qwen3_0_6B_abliterated",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.022547660395503044,
+   "par": 0.023719124495983124
+  },
+  {
+   "a": "mlabonne_Qwen3_0_6B_abliterated",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.022714704275131226,
+   "par": 0.02351205050945282
+  },
+  {
+   "a": "mlabonne_Qwen3_0_6B_abliterated",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "ablation",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.02231883630156517,
+   "par": 0.023873338475823402
+  },
+  {
+   "a": "project_numina_Kimina_Prover_Distill_0_6B",
+   "b": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.03829622268676758,
+   "par": 0.03861004859209061
+  },
+  {
+   "a": "project_numina_Kimina_Prover_Distill_0_6B",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.04552612826228142,
+   "par": 0.04350901395082474
+  },
+  {
+   "a": "project_numina_Kimina_Prover_Distill_0_6B",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.0425720252096653,
+   "par": 0.04217331111431122
+  },
+  {
+   "a": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "b": "superwhisper_s1_mini",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.030530385673046112,
+   "par": 0.030380815267562866
+  },
+  {
+   "a": "suayptalha_Qwen3_0_6B_Code_Expert",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.07360395789146423,
+   "par": 0.07307015359401703
+  },
+  {
+   "a": "superwhisper_s1_mini",
+   "b": "yunusemrejr_Flyingkiwi_TR_0_6B",
+   "cls_a": "benign",
+   "cls_b": "benign",
+   "n": 56,
+   "raw": 0.03318745642900467,
+   "par": 0.033639416098594666
+  }
+ ]
+}
