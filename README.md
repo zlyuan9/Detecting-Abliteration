@@ -41,3 +41,14 @@ every model evaluated are in `results/d6_*.json` and listed in the paper's appen
 
 The agreement results in `results/xauthor_Qwen3-0_6B.json` come from `partial_base.py`
 followed by `cross_author.py`. The intermediate direction files are large and are not included.
+
+## Storage precision and the float64 norm
+
+`experiments/mech.py` accumulates `||Delta||` in float64. A float32 norm of a large matrix is off by
+about 1e-3 relative, which clamps the residual of an exact edit to 0 and hid the rounding error of
+the stored checkpoints. `results/d6_fix_*.json` hold the 17 low-residual models rescored with the
+fix; they take precedence over the same model in older files (`labels.py`).
+
+`experiments/synth_bf16.py` rounds exact edits of Qwen3-0.6B to bf16 and fp16 and compares the
+residual with `rho / sqrt(1 + rho^2)`, where `rho` is the ratio of rounding error to edit
+(~1 minute per precision on CPU, needs only the base model).

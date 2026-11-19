@@ -31,7 +31,9 @@ def resid_scan(D, W, U, s, Vh, kmax=64):
     A = U[:, :kmax].T @ W                      # a_i = u_i^T W, one matmul
     pn2 = torch.cumsum((A * A).sum(1), 0)      # ||P_k||^2
     dot = torch.cumsum(s[:kmax] * (Vh[:kmax] * A).sum(1), 0)   # <D, P_k>
-    dn = float(D.norm())
+    # Accumulate ||D|| in float64. A float32 norm of a ~3M-element matrix is off by ~1e-3
+    # relative, which pushes c = <D,P>/(||P|| ||D||) above 1 and clamps r to 0.
+    dn = float(torch.linalg.vector_norm(D, dtype=torch.float64))
     if dn == 0:
         return None, None, None
     c = dot / (pn2.clamp_min(1e-30).sqrt() * dn)

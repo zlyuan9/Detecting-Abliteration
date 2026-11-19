@@ -40,13 +40,8 @@ BASES = {"Qwen/Qwen2.5-0.5B-Instruct": ("Qwen2.5-0.5B", "o"),
 
 def curves():
     """resid_curve of the scanned row for every model load_rows keeps."""
-    keep = {r["id"] for r in load_rows() if r.get("resid_best") is not None}
-    out = {}
-    for f in sorted(RESULTS.glob("d6_*.json")):
-        for r in json.loads(f.read_text())["rows"]:
-            if r["id"] in keep and r.get("resid_curve") and r.get("resid_best") is not None:
-                out[r["id"]] = r["resid_curve"]
-    return out
+    return {r["id"]: r["resid_curve"] for r in load_rows()
+            if r.get("resid_curve") and r.get("resid_best") is not None}
 
 
 def fig_scan(rows):

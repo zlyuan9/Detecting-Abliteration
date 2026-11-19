@@ -43,7 +43,10 @@ def load_rows(min_rel=1e-4, prefer_scan=True):
       different and worse statistic, not a simplification
     """
     out = []
-    for f in sorted(RESULTS.glob("d6_*.json")):
+    # d6_fix_* hold rows rescored after the float64-norm fix in mech.py; they take
+    # precedence over the same model in an older file.
+    for f in sorted(RESULTS.glob("d6_*.json"),
+                    key=lambda p: (not p.name.startswith("d6_fix_"), p.name)):
         blob = json.loads(f.read_text())
         for r in blob["rows"]:
             if "error" in r or r.get("resid") is None:
