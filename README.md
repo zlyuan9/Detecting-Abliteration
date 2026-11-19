@@ -14,7 +14,9 @@ observed difference is from such a projection (the scanned projection residual).
 | `experiments/d1_deltastruct.py` | Shared helpers: shard handling, residual-writing tensor selection |
 | `experiments/d6_sweep.py` | Scores public derivatives of a base model (downloads weights) |
 | `experiments/label_from_cards.py` | Writes `results/labels.json` from model cards |
-| `experiments/synth_scan.py` | Controlled edits of Qwen3-0.6B (downloads ~2.7 GB, ~9 min on CPU) |
+| `experiments/synth_scan.py` | Controlled edits of Qwen3-0.6B (downloads ~2.7 GB, ~10 min on CPU) |
+| `experiments/synth_bf16.py` | Exact edits rounded to bf16/fp16, against the predicted residual |
+| `experiments/storage_dtype.py` | Storage dtype of each declared abliteration, from safetensors headers |
 | `experiments/partial_base.py`, `experiments/cross_author.py` | Leading difference directions and cross-author agreement |
 | `experiments/labels.py` | Loads per-model scores and labels |
 | `experiments/plot_paper.py` | Figures, per-model table, and the numbers behind the paper's tables |

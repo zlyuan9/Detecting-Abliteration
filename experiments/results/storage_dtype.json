@@ -1,0 +1,16 @@
+{
+ "DavidAU/Qwen3-0.6B-heretic-abliterated-uncensored": "BF16",
+ "Goekdeniz-Guelmez/Josiefied-Qwen2.5-0.5B-Instruct-abliterated-v1": "BF16",
+ "Goekdeniz-Guelmez/Josiefied-Qwen3-0.6B-abliterated-v1": "BF16",
+ "Goekdeniz-Guelmez/Qwen3-0.6B-gabliterated-Dev": "BF16",
+ "KidIkaros/Llama-3.2-1B-Instruct-abliterated": "BF16",
+ "QuixiAI/Llama-3-8B-Instruct-abliterated-v2": "BF16",
+ "failspy/Llama-3-8B-Instruct-abliterated": "BF16",
+ "failspy/Meta-Llama-3-8B-Instruct-abliterated-v3": "BF16",
+ "huihui-ai/Huihui-Qwen3-0.6B-abliterated-v2": "BF16",
+ "lunahr/Qwen3-0.6B-abliterated": "BF16",
+ "lunahr/gemma-3-1b-it-abliterated": "BF16",
+ "mlabonne/Qwen3-0.6B-abliterated": "F32",
+ "mlabonne/gemma-3-1b-it-abliterated-v2": "F32",
+ "prithivMLmods/gemma-3-1b-it-abliterated": "F16"
+}

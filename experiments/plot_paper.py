@@ -106,6 +106,74 @@ def write_model_table(rows):
             rf"{r['n_tensors']}/{r['n_candidates']} \\")
     (OUT.parent / "tab_models.tex").write_text("\n".join(lines) + "\n")
 
+# The decision rule of Section 3.4. TAU and E0 are set inside the gaps the public set
+# leaves; K_CAP is fixed in advance. ALPHA_MAX allows for numerical error in alpha-hat.
+TAU, E0, K_CAP, ALPHA_MAX = 0.95, 0.5, 32, 1.05
+
+
+def write_rounding_table(rows):
+    """Declared abliterations: observed residual against what storage rounding alone gives.
+
+    Rounding error is about c * ||W|| for storage precision c (measured in synth_bf16.py),
+    so an exact edit of relative size rel scores rho / sqrt(1 + rho^2) with rho = c / rel.
+    """
+    dtype = json.loads((RESULTS / "storage_dtype.json").read_text())
+    syn = json.loads((RESULTS / "synth_bf16.json").read_text())["rows"]
+    c = {s: statistics.median(r["noise_rel_median"] for r in syn if r["storage"] == s)
+         for s in ("bf16", "fp16")}
+    name = {"BF16": "bf16", "F16": "fp16", "F32": "fp32"}
+    ab = sorted((r for r in rows if r["claim"] == "ablation"
+                 and r.get("resid_best") is not None), key=lambda r: r["resid_best"])
+    lines, near, above, na = [], 0, [], 0
+    for r in ab:
+        st = name.get(dtype[r["id"]], dtype[r["id"]])
+        if st in c:
+            rho = c[st] / r["rel"]
+            exp = rho / (1 + rho * rho) ** 0.5
+            ratio = r["resid_best"] / exp
+            if 0.8 <= ratio <= 1.25:
+                near += 1
+            else:
+                above.append((r["id"], ratio))
+            cells = f"{exp:.3f} & {ratio:.1f}"
+        else:
+            na += 1
+            cells = "-- & --"
+        lines.append(rf"\nolinkurl{{{r['id']}}} & {st} & {r['k_best']} & {r['rel']:.3f} & "
+                     rf"{r['resid_best']:.3f} & {cells}")
+    # No row break after the last row: a \\ at the end of an \input file followed by
+    # \bottomrule raises "Misplaced \noalign", so the paper writes that \\ itself.
+    (OUT.parent / "tab_rounding.tex").write_text(" \\\\\n".join(lines) + "\n")
+    print("\n--- observed vs rounding-only residual (Table: rounding) ---")
+    print(f"  noise/||W||: bf16 {c['bf16']:.5f}  fp16 {c['fp16']:.5f}")
+    print(f"  within 0.8-1.25x of rounding: {near}; stored fp32 (not applicable): {na}; "
+          f"other: {len(above)}")
+    for i, ratio in above:
+        print(f"    {i}  {ratio:.1f}x")
+
+
+def print_rule(rows):
+    """The four-part decision rule on the saved per-model statistics."""
+    rows = [r for r in rows if r.get("resid_best") is not None
+            and r["claim"] in ("ablation", "benign")]
+    flag = lambda r: (r["resid_best"] < TAU and r["k_best"] < K_CAP
+                      and r["energy_ratio"] >= E0)
+    a = [r for r in rows if r["claim"] == "ablation"]
+    o = [r for r in rows if r["claim"] == "benign"]
+    print("\n--- decision rule (Section 3.4) ---")
+    print(f"  tau={TAU} cap K={K_CAP} energy>={E0}: flagged {sum(map(flag, a))}/{len(a)} "
+          f"abliterations, {sum(map(flag, o))}/{len(o)} others")
+    print(f"  residual alone (< {TAU}): {sum(r['resid_best'] < TAU for r in a)}/{len(a)} "
+          f"abliterations, {sum(r['resid_best'] < TAU for r in o)}/{len(o)} others")
+    print(f"  abliterations: max resid {max(r['resid_best'] for r in a):.3f}, "
+          f"max k_hat {max(r['k_best'] for r in a)}, "
+          f"min energy ratio {min(r['energy_ratio'] for r in a):.2f}")
+    print(f"  others: min resid {min(r['resid_best'] for r in o):.3f}, "
+          f"min resid with k_hat < {K_CAP} "
+          f"{min(r['resid_best'] for r in o if r['k_best'] < K_CAP):.3f}")
+    print("  alpha-hat is not applied here: the saved sweep records it at a data-dependent k.")
+
+
 
 def separation(vals):
     """AUC (lower = abliteration), margin, and abliterations at/above the lowest other."""
@@ -217,7 +285,9 @@ if __name__ == "__main__":
     fig_resid(rows)
     fig_resid(rows, [CLASSES[0], CLASSES[2]], "fig_resid_main.pdf", width=3.6)
     write_model_table(rows)
+    write_rounding_table(rows)
     print("wrote", OUT / "fig_scan.pdf", OUT / "fig_resid.pdf",
           OUT.parent / "tab_models.tex")
     print_tables(rows)
     print_baselines(rows)
+    print_rule(rows)
